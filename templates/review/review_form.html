@@ -9,7 +9,8 @@
               <div class="card-body" style="background-color: rgba(245, 245, 245, 0);">
                   <form method="post" action="{% url 'review:write' %}">
                       {% csrf_token %}
-                      {% for field in form %}
+                      {{form.as_p}}
+                      <!-- {% for field in form %} 
                         <div class="form-group">
                             {% if field.html_name != 'username' %}
                             <label for="{{ field.id_for_label }}">{{ field.label }}</label>
@@ -30,6 +31,7 @@
                             {% for error in field.errors %}
                                 <div class="invalid-feedback">{{ error }}</div>
                             {% endfor %}
+                            -->
                         </div>
                       {% endfor %}
                       <input class="btn btn-block" style="background-color: rgba(245, 245, 245, 0.3);" type="submit" value="저장">

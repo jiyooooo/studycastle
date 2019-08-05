@@ -25,6 +25,9 @@ class ReviewForm(ModelForm):
                 'max_length': _('내용은 500자 이하로 작성해주세요.')
             },
         }
+
+        
+
         widgets = {
             'username': forms.HiddenInput(),
             'content': forms.Textarea()

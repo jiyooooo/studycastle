@@ -8,6 +8,7 @@ class ReviewForm(ModelForm):
     class Meta:
         model = Review
         fields = ['title', 'content', 'username', 'star']
+
         labels = {
             'title': _('제목'),
             'content': _('내용'),
@@ -27,6 +28,7 @@ class ReviewForm(ModelForm):
         widgets = {
             'username': forms.HiddenInput(),
             'content': forms.Textarea()
+            
         }
 
 

@@ -7,7 +7,7 @@ from django.utils.translation import gettext_lazy as _
 class ReviewForm(ModelForm):
     class Meta:
         model = Review
-        fields = ['title', 'content', 'username', 'star']
+        fields = ['title', 'content', 'username', 'star', 'time']
 
         labels = {
             'title': _('제목'),

@@ -17,6 +17,5 @@ class Review(models.Model):
           ('★★★★★', '★★★★★'),
         }
     star = models.CharField(max_length=5, choices=STAR_CHOICES, default='★')
-
-
+    time = models.CharField(max_length=5, choices=STAR_CHOICES, default='★')
 

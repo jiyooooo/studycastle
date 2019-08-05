@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="en">
+{% extends 'main-navbar.html' %}
+{% block content %}
 
 <head>
   <!-- Required meta tags -->
@@ -17,459 +17,151 @@
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
   <!--fonts   -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Sans+KR&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="../static/css/style.css" type="text/css">
+  <link rel="stylesheet" href="../../static/css/style.css" type="text/css">
   <title>Home</title>
 </head>
-
-<body>
-  <nav class="navbar fixed-top navbar-light" style="background-color: #ffffff;">
-    <div class="main-container nav-bg-color">
-      <div class="inside-container nav-contain">
-        <nav class="navbar navbar-expand-lg navbar-light ">
-          <a href="index.html"><img src="../static/image/logos/Logo 4.png" class="img-fluid" alt=""></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav nav-list ml-auto">
-              <a class="menu" href="index.html">HOME</a>
-              <a class="menu" href="services.html">소개</a>
-              <a class="menu" href="#">커뮤니티</a>
-              <a class="menu" href="#">추천</a>
-              <a class="menu" href="blog.html">리뷰</a>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle menu" href="#" id="navbardrop" style="font-size: 20px"
-                  data-toggle="dropdown">My Page</a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">서브1</a>
-                  <a class="dropdown-item" href="#">서브2</a>
-                  <a class="dropdown-item" href="#">서브3</a>
-                </div>
-              </li>
-              <span class="menu last-spc color-line"> | </span>
-              <a class="menu icon-color last-spc" href="#"><i class="fas fa-user-plus"></i></a>
-              <a class="menu icon-color  last-spc" href="#"><i class="fas fa-user-alt-slash"></i></a>
-            </div>
-          </div>
-        </nav>
-  </nav>
-  </div>
-  </div>
-  </div>
-
-  <!--carousel-->
-  <div class="main-container carousel-height">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active first-slider">
-          <div class="inside-container">
-            <div class="row">
-              <div class="col-lg-12  ">
-                <div class="carousel-text">
-                  <h1>With in <span class="second">seconds</span> to ready your <span class="bs-card"> business
-                      cards</span></h1>
-                  <p>They call him Flipper Flipper faster than lightning. No one you see is smarter than he. These <br>
-                    days are all Happy and Free. These days are all share them with me oh baby. <br>Sometimes you knows
-                    your name.</p>
-                  <div class="butns">
-                    <button class="about-btn">about us </button>
-                    <button class="work-btn">our work</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item  first-slider-1">
-          <div class="inside-container">
-            <div class="row">
-              <div class="col-lg-12 ">
-                <div class="carousel-text">
-                  <span>With in <span class="second">seconds</span> to ready your <span class="bs-card"> business
-                      cards</span></span>
-                  <p>They call him Flipper Flipper faster than lightning. No one you see is smarter than he. These <br>
-                    days are all Happy and Free. These days are all share them with me oh baby. <br>
-                    Sometimes you knows your name.</p>
-                  <div class="butns">
-                    <button class="about-btn">about us </button>
-                    <button class="work-btn">our work</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span><i class="fas fa-arrow-right  fa-rotate-180 arrow"></i></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span><i class="fas fa-arrow-right arrow"></i></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-  <!--our work-->
-  <div class="main-container">
-    <div class="inside-container">
-      <div class="row">
-        <div class="col-12 our-header prom-padd">
-          <h2>our recommend</h2>
-          <div class="text-center">
-            <hr> <i class="far fa-square rotate-45"></i> <i class="far fa-square rotate-45"></i>
-            <hr>
-          </div>
-
-          <div class="linker-work js-filter button">
-            <button data-filter="*">모든 강의</button> <button data-filter=".business"> 수학</button> <button
-              data-filter=".business"> 영어</button> <button data-filter=".postcard"> 사회탐구</button> <button
-              data-filter=".brocher"> 국어</button> <button data-filter=".postcard"> 사회탐구</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row grid-gallery">
-      <div class="col-12">
-        <div class="row gallery-height">
-          <div class="col-lg-3 col-1-height col1-height col-over gallery-item brocher">
-            <div class="col-overlay padd-col  ">
-              <div class="our-header">
-                <p>국어 김동욱</p>
-                <div class="icon-overlay">
-                  <a href="#"> <i class="fas fa-compress-arrows-alt"></i></a>
-                  <a href="#"> <i class="fas fa-link"></i> </a>
-                </div>
-                <div class="text-center">
-                  <hr> <i class="far fa-square rotate-45"></i> <i class="far fa-square rotate-45"></i>
-                  <hr>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="row ">
-              <div class=" col-lg-6  col2-height col-over gallery-item business">
-                <div class="col-overlay padd-col ">
-                  <div class="our-header">
-                    <p>수학 김성은</p>
-                    <div class="icon-overlay">
-                      <a href="#"> <i class="fas fa-compress-arrows-alt"></i></a>
-                      <a href="#"> <i class="fas fa-link"></i> </a>
-                    </div>
-                    <div class="text-center">
-                      <hr> <i class="far fa-square rotate-45"></i> <i class="far fa-square rotate-45"></i>
-                      <hr>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class=" col-lg-6 col2-1-height col-over gallery-item business">
-                <div class="col-overlay  ">
-                  <div class="our-header">
-                    <p>수학 현우진</p>
-                    <div class="icon-overlay">
-                      <a href="#"> <i class="fas fa-compress-arrows-alt"></i></a>
-                      <a href="#"> <i class="fas fa-link"></i> </a>
-                    </div>
-                    <div class="text-center">
-                      <hr> <i class="far fa-square rotate-45"></i> <i class="far fa-square rotate-45"></i>
-                      <hr>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-12 col3-height col-over gallery-item business">
-                <div class="col-overlay  ">
-                  <div class="our-header">
-                    <p>수학 배성민</p>
-                    <div class="icon-overlay">
-                      <a href="#"> <i class="fas fa-compress-arrows-alt"></i></a>
-                      <a href="#"> <i class="fas fa-link"></i> </a>
-                    </div>
-                    <div class="text-center">
-                      <hr> <i class="far fa-square rotate-45"></i> <i class="far fa-square rotate-45"></i>
-                      <hr>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="row ">
-              <div class=" col-lg-6  col4-height col-over gallery-item business">
-                <div class="col-overlay padd-col ">
-                  <div class="our-header">
-                    <p>영어 김성은</p>
-                    <div class="icon-overlay">
-                      <a href="#"> <i class="fas fa-compress-arrows-alt"></i></a>
-                      <a href="#"> <i class="fas fa-link"></i> </a>
-                    </div>
-                    <div class="text-center">
-                      <hr> <i class="far fa-square rotate-45"></i> <i class="far fa-square rotate-45"></i>
-                      <hr>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class=" col-lg-6 col5-1-height col-over gallery-item business">
-                <div class="col-overlay  ">
-                  <div class="our-header">
-                    <p>수학 현우진</p>
-                    <div class="icon-overlay">
-                      <a href="#"> <i class="fas fa-compress-arrows-alt"></i></a>
-                      <a href="#"> <i class="fas fa-link"></i> </a>
-                    </div>
-                    <div class="text-center">
-                      <hr> <i class="far fa-square rotate-45"></i> <i class="far fa-square rotate-45"></i>
-                      <hr>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-12 col6-height col-over gallery-item business">
-                <div class="col-overlay  ">
-                  <div class="our-header">
-                    <p>수학 배성민</p>
-                    <div class="icon-overlay">
-                      <a href="#"> <i class="fas fa-compress-arrows-alt"></i></a>
-                      <a href="#"> <i class="fas fa-link"></i> </a>
-                    </div>
-                    <div class="text-center">
-                      <hr> <i class="far fa-square rotate-45"></i> <i class="far fa-square rotate-45"></i>
-                      <hr>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+<!--carousel-->
+<center>
+<div class="main-container carousel-height">
+  <div id="carouselExampleIndicators" class="carousel slide col-lg-8 col-md-8 col-sm-8" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active first-slider">
+        <div class="inside-container">
           <div class="row">
-            <div class=" col-lg-3 r3-col r3-col-1 col-over gallery-item postcard">
-              <div class="col-overlay  ">
-                <div class="our-header">
-                  <p>지리영역</p>
-                  <div class="icon-overlay">
-                    <a href="http://www.megastudy.net/teacher_v2/main.asp?tec_cd=lksbutt"> <i
-                        class="fas fa-compress-arrows-alt"></i></a>
-                    <a href="#"> <i class="fas fa-link"></i> </a>
-                  </div>
-                  <div class="text-center">
-                    <hr> <i class="far fa-square rotate-45"></i> <i class="far fa-square rotate-45"></i>
-                    <hr>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class=" col-lg-3 r3-col r3-col-2 col-over gallery-item postcard">
-              <div class="col-overlay  ">
-                <div class="our-header">
-                  <p>사회문화</p>
-                  <div class="icon-overlay">
-                    <a
-                      href="http://www.mimacstudy.com/tcher/lctr/lctrDetail.ds?tcdTabType=tcdHome&relm=04&subj=0412&tcd=359&pid=PL00035522">
-                      <i class="fas fa-compress-arrows-alt"></i></a>
-                    <a href="#"> <i class="fas fa-link"></i> </a>
-                  </div>
-                  <div class="text-center">
-                    <hr> <i class="far fa-square rotate-45"></i> <i class="far fa-square rotate-45"></i>
-                    <hr>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class=" col-lg-3 r3-col r3-col-3 col-over gallery-item postcard">
-              <div class="col-overlay  ">
-                <div class="our-header">
-                  <p>윤리영역</p>
-                  <div class="icon-overlay">
-                    <a href="https://www.conects.com/course/detail/intro/252179"> <i
-                        class="fas fa-compress-arrows-alt"></i></a>
-                    <a href="#"> <i class="fas fa-link"></i> </a>
-                  </div>
-                  <div class="text-center">
-                    <hr> <i class="far fa-square rotate-45"></i> <i class="far fa-square rotate-45"></i>
-                    <hr>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 r3-col r3-col-4 col-over gallery-item postcard">
-              <div class="col-overlay  ">
-                <div class="our-header">
-                  <p>법과 정치</p>
-                  <div class="icon-overlay">
-                    <a href="http://www.megastudy.net/lecmain/mains/chr_detail/lecture_detailview.asp?CHR_CD=44484"> <i
-                        class="fas fa-compress-arrows-alt"></i></a>
-                    <a href="#"> <i class="fas fa-link"></i> </a>
-                  </div>
-                  <div class="text-center">
-                    <hr> <i class="far fa-square rotate-45"></i> <i class="far fa-square rotate-45"></i>
-                    <hr>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-1-height col1-2-height col-over gallery-item brocher">
-            <div class="col-overlay padd-col  ">
-              <div class="our-header">
-                <p>국어 김상훈</p>
-                <div class="icon-overlay">
-                  <a href="#"> <i class="fas fa-compress-arrows-alt"></i></a>
-                  <a href="#"> <i class="fas fa-link"></i> </a>
-                </div>
-                <div class="text-center">
-                  <hr><i class="far fa-square rotate-45"></i> <i class="far fa-square rotate-45"></i>
-                  <hr>
+            <div class="col-lg-12">
+              <div class="carousel-text">
+                <h1>조선대학교 멋쟁이 사자처럼 <span class="bs-card"> 'STUDYCASTLE'</span></h1>
+                <p>STUDYCASTLE <br> STUDYCASTLE </p>
+                <div class="butns">
+                  <button class="read-more" onclick="location.href = '{% url 'services' %}' ">about us </button>
+                  <button class="read-more" onclick="location.href = '{% url 'services' %}' ">our work</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class=" col-lg-3 r3-col r3-col-4 col-over gallery-item postcard">
-            <div class="col-overlay  ">
-              <div class="our-header">
-                <p>생명과학</p>
-                <div class="icon-overlay">
-                  <a href="http://www.megastudy.net/teacher_v2/main.asp?tec_cd=lksbutt"> <i
-                      class="fas fa-compress-arrows-alt"></i></a>
-                  <a href="#"> <i class="fas fa-link"></i> </a>
-                </div>
-                <div class="text-center">
-                  <hr> <i class="far fa-square rotate-45"></i> <i class="far fa-square rotate-45"></i>
-                  <hr>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class=" col-lg-3 r3-col r3-col-5 col-over gallery-item postcard">
-            <div class="col-overlay  ">
-              <div class="our-header">
-                <p>사회문화</p>
-                <div class="icon-overlay">
-                  <a
-                    href="http://www.mimacstudy.com/tcher/lctr/lctrDetail.ds?tcdTabType=tcdHome&relm=04&subj=0412&tcd=359&pid=PL00035522">
-                    <i class="fas fa-compress-arrows-alt"></i></a>
-                  <a href="#"> <i class="fas fa-link"></i> </a>
-                </div>
-                <div class="text-center">
-                  <hr> <i class="far fa-square rotate-45"></i> <i class="far fa-square rotate-45"></i>
-                  <hr>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class=" col-lg-3 r3-col r3-col-6 col-over gallery-item postcard">
-            <div class="col-overlay  ">
-              <div class="our-header">
-                <p>윤리영역</p>
-                <div class="icon-overlay">
-                  <a href="https://www.conects.com/course/detail/intro/252179"> <i
-                      class="fas fa-compress-arrows-alt"></i></a>
-                  <a href="#"> <i class="fas fa-link"></i> </a>
-                </div>
-                <div class="text-center">
-                  <hr> <i class="far fa-square rotate-45"></i> <i class="far fa-square rotate-45"></i>
-                  <hr>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 r3-col r3-col-7 col-over gallery-item postcard">
-            <div class="col-overlay  ">
-              <div class="our-header">
-                <p>법과 정치</p>
-                <div class="icon-overlay">
-                  <a href="http://www.megastudy.net/lecmain/mains/chr_detail/lecture_detailview.asp?CHR_CD=44484"> <i
-                      class="fas fa-compress-arrows-alt"></i></a>
-                  <a href="#"> <i class="fas fa-link"></i> </a>
-                </div>
-                <div class="text-center">
-                  <hr> <i class="far fa-square rotate-45"></i> <i class="far fa-square rotate-45"></i>
-                  <hr>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
+      <div class="carousel-item  first-slider-1">
+        <div class="inside-container col-lg-8 col-md-8 col-sm-8" >
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="carousel-text">
+                <h1>조선대학교 멋쟁이 사자처럼 <span class="bs-card"> 'STUDYCASTLE'</span></h1>
+                <p>STUDYCASTLE <br> STUDYCASTLE </p>
+                <div class="butns">
+                  <button class="read-more" onclick="location.href = '{% url 'services' %}' ">about us </button>
+                  <button class="read-more" onclick="location.href = '{% url 'services' %}' ">our work</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span><i class="fas fa-arrow-right  fa-rotate-180 arrow"></i></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span><i class="fas fa-arrow-right arrow"></i></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
+  </div>
+</div>
+</center>
+
+
+
+
+<!--our work-->
+<div class="main-container">
+  <div class="inside-container-1">
+    <h1>Rising Star</h1>
+    <input type="radio" id="reset" name="color" />
+    <label for="reset">전체 강의</label>
+    <input type="radio" id="korean" name="color" />
+    <label for="korean">국어</label>
+    <input type="radio" id="english" name="color" />
+    <label for="english">영어</label>
+    <input type="radio" id="math" name="color" />
+    <label for="math">수학</label>
+    <input type="radio" id="social" name="color" />
+    <label for="social">사회</label>
+    <input type="radio" id="science" name="color" />
+    <label for="science">과학</label>
+
+    <div class="tile korean korean1">1</div>
+    <div class="tile english english1">2</div>
+    <div class="tile korean korean2">3</div>
+    <div class="tile social social1">4</div>
+    <div class="tile korean korean3">5</div>
+    <div class="tile english english2">6</div>
+    <div class="tile social social2">7</div>
+    <div class="tile math math1">8</div>
+    <div class="tile korean korean4">9</div>
+    <div class="tile math math2">10</div>
+    <div class="tile english english3">11</div>
+    <div class="tile math math3">12</div>
+    <div class="tile social social3">13</div>
+    <div class="tile korean korean5">14</div>
+    <div class="tile math math4">15</div>
+    <div class="tile english english">16</div>
+    <div class="tile science science1">17</div>
+    <div class="tile english english5">18</div>
+    <div class="tile science science2">19</div>
   </div>
 
 
   <!-- partner carousel-->
-  <div class="main-container partner-bg">
-    <div class="inside-container ">
-      <div class="row">
-        <div class="col-12 owl-seci">
-          <div class="owl-carousel owl-theme owl-partner">
-            <div class="item item-over ">
-              <div class="partner-logo ">
-                <img src="../static/image/logos/Logo 1.png" alt="">
+  {% load staticfiles %}
+    <!-- partner carousel-->
+    <div class="main-container partner-bg">
+        <div class="inside-container ">
+          <div class="row">
+            <div class="col-12 owl-seci">
+              <div class="owl-carousel owl-theme owl-partner">
+                <div class="item item-over ">
+                  <div class="partner-logo ">
+                    <img src="{% static "image/logos/Logo 1.png" %}">
+                  </div>
+  
+                </div>
+                <div class="item item-over ">
+                  <div class="partner-logo ">
+                    <img src="{% static "image/logos/Logo2.png" %}">
+                  </div>
+  
+                </div>
+                <div class="item item-over ">
+                  <div class="partner-logo ">
+                    <img src="{% static "image/logos/Logo 3.png" %}">
+                  </div>
+  
+                </div>
+                <div class="item item-over ">
+                  <div class="partner-logo ">
+                    <img src="{% static "image/logos/Logo 4.png" %}">
+                  </div>
+  
+                </div>
+                <div class="item item-over ">
+                  <div class="partner-logo ">
+                    <img src="{% static "image/logos/Logo 5.png" %}">
+                  </div>
+  
+                </div>
+  
+  
+                </div>
               </div>
-
-            </div>
-            <div class="item item-over ">
-              <div class="partner-logo ">
-                <img src="../static/image/logos/Logo2.png" alt="">
-              </div>
-
-            </div>
-            <div class="item item-over ">
-              <div class="partner-logo ">
-                <img src="../static/image/logos/logo 3.PNG" alt="">
-              </div>
-
-            </div>
-            <div class="item item-over ">
-              <div class="partner-logo ">
-                <img src="../static/image/logos/Logo 4.png" alt="">
-              </div>
-
-            </div>
-            <div class="item item-over ">
-              <div class="partner-logo ">
-                <img src="../static/image/logos/Logo 1.png" alt="">
-              </div>
-
-            </div>
-            <div class="item item-over ">
-              <div class="partner-logo ">
-                <img src="../static/image/logos/Logo2.png" alt="">
-              </div>
-
-            </div>
-            <div class="item item-over ">
-              <div class="partner-logo ">
-                <img src="../static/image/logos/logo 3.PNG" alt="">
-              </div>
-
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <!--footer-->
+
   <!--footer -->
   <footer class="page-footer footer-bg">
     <div class="inside-container">
@@ -496,10 +188,9 @@
           </div>
         </div>
         <div class=" col-sm-6 col-lg-3 foot-col-padd">
-          <div class="foot-logo"><img src="../static/image/image/foot-logo.JPG" alt="" class="img-fluid"></div>
+          <div class="foot-logo"><img src="../static/image/image/footlogo.png" alt="" class="img-fluid"></div>
           <div class="dream-text">
-            <p>Got a dream and we just know now we're gonna make our dream come true. No phone no lights no motor car
-              not a single luxury. </p>
+            <p>ABCDEFG </p>
           </div>
           <div>
             <i class="fab fa-facebook-f foot-icon "></i>
@@ -515,7 +206,7 @@
           <hr>
           <div class="row contact-row-margin">
             <i class="fas fa-map-marker-alt contact-icon"></i>
-            <p> Collins Street West,<br> King Street, Melbourne.</p>
+            <p> 필문대로<br>뿅.</p>
           </div>
           <div class="row contact-row-margin">
             <i class="fas fa-phone fa-rotate-90 contact-icon"></i>
@@ -568,6 +259,7 @@
   <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
   <script src="../static/js/script.js">  </script>
 
-</body>
+  </body>
 
-</html>
+  </html>
+  {% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'review/reviewnavbar.html' %}
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12" style="margin-top:100px; ">
+      <h3>{{ review.title }}</h3>
+      <h7>작성자: {{ review.username }}</h7>
+      <br>
+      <h4>
+        <pre>{{ review.content }}</pre>
+      </h4>
+      <a href="{% url 'review:index' %}">
+        <button class="btn" style="background-color: rgba(245, 245, 245, 0); ">목록</button>
+      </a>
+
+
+    </div>
+  </div>
+</div>
+{% endblock %}

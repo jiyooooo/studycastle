@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="en">
+{% extends 'main-navbar.html' %}
+{% block content %}
 
 <head>
   <!-- Required meta tags -->
@@ -17,445 +17,394 @@
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
   <!--fonts   -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Sans+KR&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="../static/css/service-style.css" type="text/css">
-  <link rel="stylesheet" href="../static/css/style.css" type="text/css">
+
+  <link rel="stylesheet" href="../../static/css/service-style.css" type="text/css">
+  <link rel="stylesheet" href="../../static/css/style.css" type="text/css">
   <style>
     html {
       scroll-behavior: smooth;
     }
-
-    #section1 {
-      height: 600px;
-      background-color: pink;
-    }
-
-    #section2 {
-      height: 600px;
-      background-color: yellow;
-    }
   </style>
+
+
   <title>Service</title>
+
+
 </head>
 
-<body>
-  <div class="main-container contact-color">
-    <div class="inside-container ">
-      <div class="row row-spc">
-        <div class="col-md-12  col-disp">
-          <div class="icon-scp">
-            <div class="left-side">
-              <a class="link-head " href="#"><i class="fas fa-phone fa-rotate-90"></i> +(11)123 456 7890</a>
-              <span>|</span>
-              <a class="link-head " href="#"><i class="far fa-clock"></i> Sun-Mon: 9.00am to 7.00pm</a> <span>|</span>
-              <a class="link-head " href="#"><i class="far fa-envelope "> </i> info@flamix.com </a>
-            </div>
-          </div>
-          <div class="ml-auto icon-scp">
-            <i class="fab fa-facebook-f "></i>
-            <i class="fab fa-twitter icon-scp"></i>
-            <i class="fab fa-linkedin-in icon-scp"></i>
-            <i class="fab fa-tumblr icon-scp"></i>
-            <i class="fab fa-vimeo-v icon-scp"></i>
-            <i class="fab fa-pinterest-p icon-scp"></i>
-          </div>
+<!--We are the best-->
+<div class="main-container">
+  <div class="inside-container">
+    <div class="row">
+      <div class="col-12 our-header">
+        <h2> Why we are the best</h2>
+        <div class="text-center">
+          <hr> <i class="far fa-square rotate-45"></i> <i class="far fa-square rotate-45"></i>
+          <hr>
+        </div>
+      </div>
+    </div>
+    <div class="row row-pad">
+      <div class=" col-sm-6 col-md-3  our-spec">
+        <div class="text-center">
+          <i class="fas fa-star-half-alt rounded-circle"></i>
+        </div>
+        <h3> City of star</h3>
+        <p>
+          If you have a problem if no one else can help and if you can find <br>
+          can hire The A-Team.
+        </p>
+        <div class="rd-btn">
+          <a href="#result1"><button class="read-more"> read more</button></a>
+        </div>
+      </div>
+      <div class=" col-sm-6 col-md-3  our-spec">
+        <div class="text-center">
+          <i class="far fa-handshake rounded-circle"></i>
+        </div>
+        <h3> Trust me!</h3>
+        <p>
+          Come and listen to a story about a man named Jed - a poor mountaineer barely kept his family fed.
+        </p>
+        <div class="rd-btn">
+          <a href="#result2"><button class="read-more"> read more</button></a>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3  our-spec">
+        <div class="text-center">
+          <i class="fas fa-history rounded-circle"></i>
+        </div>
+        <h3> 24/7 Support</h3>
+        <p>
+          The movie star the professor and Mary Ann here on Gilligans Michael Knight a young loner.
+        </p>
+        <div class="rd-btn">
+          <a href="#result3"><button class="read-more"> read more</button></a>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3  our-spec">
+        <div class="text-center">
+          <i class="far fa-money-bill-alt rounded-circle"></i>
+        </div>
+        <h3> Money Money!!</h3>
+        <p>
+          The Brady Bunch the Brady Bunch that's the way we all became the
+          Brady Bunch
+        </p>
+        <div class="rd-btn">
+          <a href="#result4"><button class="read-more"> read more</button></a>
         </div>
       </div>
     </div>
   </div>
-  <!--menu-->
+</div>
 
-  <body>
-    <nav class="navbar fixed-top navbar-light" style="background-color: #ffffff;">
-      <div class="main-container nav-bg-color">
-        <div class="inside-container nav-contain">
-          <nav class="navbar navbar-expand-lg navbar-light ">
-            <a href="index.html"><img src="../static/image/image/Logo 4.png" class="img-fluid" alt=""></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-              aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav nav-list ml-auto">
-                <a class="menu" href="index.html">HOME</a>
-                <a class="menu" href="services.html">소개</a>
-                <a class="menu" href="#">커뮤니티</a>
-                <a class="menu" href="#">추천</a>
-                <a class="menu" href="blog.html">리뷰</a>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle menu" href="blog-single.html" id="navbardrop"
-                    style="font-size: 20px" data-toggle="dropdown">My Page</a>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">서브1</a>
-                    <a class="dropdown-item" href="#">서브2</a>
-                    <a class="dropdown-item" href="#">서브3</a>
-                  </div>
-                </li>
-                <span class="menu last-spc color-line"> | </span>
-                <a class="menu icon-color last-spc" href="#"><i class="fas fa-user-plus"></i></a>
-                <a class="menu icon-color  last-spc" href="#"><i class="fas fa-user-alt-slash"></i></a>
+<!--item carousel-->
+<div class="main-container">
+  <div class="inside-container">
+    <div class="row">
+      <div class="col-12 our-header prom-padd">
+        <h2>our experienced team</h2>
+        <div class="text-center">
+          <hr> <i class="far fa-square rotate-45"></i> <i class="far fa-square rotate-45"></i>
+          <hr>
+        </div>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 owl-seci">
+        <div class="owl-carousel owl-theme scren-owl">
+          <div class="item item-over ">
+            <div class="item-bg item-bg-1">
+              <div class="over-image">
+                <span>김상언</span>
+                <div class="social-icon">
+                  <i class="fab fa-facebook-f "></i>
+                  <i class="fab fa-twitter "></i>
+                  <i class="fab fa-linkedin-in "></i>
+                  <i class="fab fa-tumblr "></i>
+                </div>
+                <div class="details-link"> <a>STUDY CASTLE CIO</a><br><a>멋쟁이 사자처럼</a><br><a>조선대학교 멋사 7기</a><br><a>조선대학교
+                    컴퓨터공학과</a><br><a>고양시 어울림배 수영대회 4위</a><br><a>재활스포츠센터 근무</a> </div>
               </div>
             </div>
-          </nav>
-    </nav>
-    </div>
-    </div>
-    </div>
+          </div>
+          <div class="item item-over">
+            <div class="item-bg item-bg-2">
 
+              <div class="over-image">
+                <span>김희진</span>
+                <div class="social-icon">
+                  <i class="fab fa-facebook-f "></i>
+                  <i class="fab fa-twitter "></i>
+                  <i class="fab fa-linkedin-in "></i>
+                  <i class="fab fa-tumblr "></i>
+                </div>
+                <div class="details-link"> <a>STUDY CASTLE CFO</a><br><a>조선대학교 입학</a><br><a>조선대학교 멋사 7기</a><br><a>행정복지학부
+                    재학</a> <br> <a>조선대학교</a><br><a>집사생활 5년</a><br><a>운전면허 2종 소지</a> </div>
+              </div>
+            </div>
+          </div>
+          <div class="item item-over">
+            <div class="item-bg item-bg-3">
 
-    <!--We are the best-->
-    <div class="main-container">
-      <div class="inside-container">
-        <div class="row">
-          <div class="col-12 our-header">
-            <h2> Why we are the best</h2>
-            <div class="text-center">
-              <hr> <i class="far fa-square rotate-45"></i> <i class="far fa-square rotate-45"></i>
-              <hr>
+              <div class="over-image">
+                <span>윤지유</span>
+                <div class="social-icon">
+                  <i class="fab fa-facebook-f "></i>
+                  <i class="fab fa-twitter "></i>
+                  <i class="fab fa-linkedin-in "></i>
+                  <i class="fab fa-tumblr "></i>
+                </div>
+                <div class="details-link"> <a>STUDY CASTLE CTO</a><br><a>조선대학교 멋사 7기</a><br><a>조선대학교 기계공학과</a><br><a>청와대
+                    어린이 기자단</a></div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="row row-pad">
-          <div class=" col-sm-6 col-md-3  our-spec">
-            <div class="text-center">
-              <i class="fas fa-star-half-alt rounded-circle"></i>
-            </div>
-            <h3> City of star</h3>
-            <p>
-              If you have a problem if no one else can help and if you can find <br>
-              can hire The A-Team.
-            </p>
-            <div class="rd-btn">
-              <a href="#result1"><button class="read-more"> read more</button></a>
-            </div>
-          </div>
-          <div class=" col-sm-6 col-md-3  our-spec">
-            <div class="text-center">
-              <i class="far fa-handshake rounded-circle"></i>
-            </div>
-            <h3> Trust me!</h3>
-            <p>
-              Come and listen to a story about a man named Jed - a poor mountaineer barely kept his family fed.
-            </p>
-            <div class="rd-btn">
-              <a href="#result2"><button class="read-more"> read more</button></a>
+          <div class="item item-over">
+            <div class="item-bg item-bg-4">
+              <div class="over-image">
+                <span>이은송</span>
+                <div class="social-icon">
+                  <i class="fab fa-facebook-f "></i>
+                  <i class="fab fa-twitter "></i>
+                  <i class="fab fa-linkedin-in "></i>
+                  <i class="fab fa-tumblr "></i>
+                </div>
+                <div class="details-link"> <a>STUDY CASTLE CEO</a><br><a>조선대학교 멋사 7기</a><br> <a>컴퓨터공학과</a><br>
+                  <a>은송체고!</a><br> <a> 창모체고!</a></br><a> 해쉬체고!</a></div>
+              </div>
             </div>
           </div>
-          <div class="col-sm-6 col-md-3  our-spec">
-            <div class="text-center">
-              <i class="fas fa-history rounded-circle"></i>
-            </div>
-            <h3> 24/7 Support</h3>
-            <p>
-              The movie star the professor and Mary Ann here on Gilligans Michael Knight a young loner.
-            </p>
-            <div class="rd-btn">
-              <a href="#result3"><button class="read-more"> read more</button></a>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-3  our-spec">
-            <div class="text-center">
-              <i class="far fa-money-bill-alt rounded-circle"></i>
-            </div>
-            <h3> Money Money!!</h3>
-            <p>
-              The Brady Bunch the Brady Bunch that's the way we all became the
-              Brady Bunch
-            </p>
-            <div class="rd-btn">
-              <a href="#result4"><button class="read-more"> read more</button></a>
+          <div class="item item-over">
+            <div class="item-bg item-bg-5">
+
+              <div class="over-image">
+                <span>Luka Jim </span>
+                <div class="social-icon">
+                  <i class="fab fa-facebook-f "></i>
+                  <i class="fab fa-twitter "></i>
+                  <i class="fab fa-linkedin-in "></i>
+                  <i class="fab fa-tumblr "></i>
+                </div>
+                <div class="details-link"> <a href="#">VIEW DETAILS </a> </div>
+              </div>
             </div>
           </div>
+          <div class="item item-over">
+            <div class="item-bg item-bg-6">
+              <div class="over-image">
+                <span>Nimi Sean</span>
+                <div class="social-icon">
+                  <i class="fab fa-facebook-f "></i>
+                  <i class="fab fa-twitter "></i>
+                  <i class="fab fa-linkedin-in "></i>
+                  <i class="fab fa-tumblr "></i>
+                </div>
+                <div class="details-link"> <a href="#">VIEW DETAILS </a> </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
+  </div>
+</div>
 
-    <!--item carousel-->
-    <div class="main-container">
-      <div class="inside-container">
-        <div class="row">
-          <div class="col-12 our-header prom-padd">
-            <h2>our experienced team</h2>
-            <div class="text-center">
-              <hr> <i class="far fa-square rotate-45"></i> <i class="far fa-square rotate-45"></i>
-              <hr>
-            </div>
-
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 owl-seci">
-            <div class="owl-carousel owl-theme scren-owl">
-              <div class="item item-over ">
-                <div class="item-bg item-bg-1">
-                  <div class="over-image">
-                    <span>김상언</span>
-                    <div class="social-icon">
-                      <i class="fab fa-facebook-f "></i>
-                      <i class="fab fa-twitter "></i>
-                      <i class="fab fa-linkedin-in "></i>
-                      <i class="fab fa-tumblr "></i>
-                    </div>
-                    <div class="details-link"> <a>STUDY CASTLE CIO</a><br><a>멋쟁이 사자처럼</a><br><a>조선대학교 멋사
-                        7기</a><br><a>조선대학교 컴퓨터공학과</a><br><a>고양시 어울림배 수영대회 4위</a><br><a>재활스포츠센터 근무</a> </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item item-over">
-                <div class="item-bg item-bg-2">
-
-                  <div class="over-image">
-                    <span>김희진</span>
-                    <div class="social-icon">
-                      <i class="fab fa-facebook-f "></i>
-                      <i class="fab fa-twitter "></i>
-                      <i class="fab fa-linkedin-in "></i>
-                      <i class="fab fa-tumblr "></i>
-                    </div>
-                    <div class="details-link"> <a>STUDY CASTLE CFO</a><br><a>조선대학교 입학</a><br><a>조선대학교 멋사
-                        7기</a><br><a>행정복지학부 재학</a> <br> <a>조선대학교</a><br><a>집사생활 5년</a><br><a>운전면허 2종 소지</a> </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item item-over">
-                <div class="item-bg item-bg-3">
-
-                  <div class="over-image">
-                    <span>윤지유</span>
-                    <div class="social-icon">
-                      <i class="fab fa-facebook-f "></i>
-                      <i class="fab fa-twitter "></i>
-                      <i class="fab fa-linkedin-in "></i>
-                      <i class="fab fa-tumblr "></i>
-                    </div>
-                    <div class="details-link"> <a>STUDY CASTLE CTO</a><br><a>조선대학교 멋사 7기</a><br><a>조선대학교
-                        기계공학과</a><br><a>청와대 어린이 기자단</a><br><a>조선대 생화고 자퇴</a><br></div>
-                  </div>
-                </div>
-              </div>
-              <div class="item item-over">
-                <div class="item-bg item-bg-4">
-                  <div class="over-image">
-                    <span>이은송</span>
-                    <div class="social-icon">
-                      <i class="fab fa-facebook-f "></i>
-                      <i class="fab fa-twitter "></i>
-                      <i class="fab fa-linkedin-in "></i>
-                      <i class="fab fa-tumblr "></i>
-                    </div>
-                    <div class="details-link"> <a>STUDY CASTLE CEO</a><br><a>조선대학교 멋사 7기</a><br> <a>컴퓨터공학과</a><br>
-                      <a>은송체고!</a><br> <a> 창모체고!</a></br><a> 해쉬체고!</a></div>
-                  </div>
-                </div>
-              </div>
-              <div class="item item-over">
-                <div class="item-bg item-bg-5">
-
-                  <div class="over-image">
-                    <span>Luka Jim </span>
-                    <div class="social-icon">
-                      <i class="fab fa-facebook-f "></i>
-                      <i class="fab fa-twitter "></i>
-                      <i class="fab fa-linkedin-in "></i>
-                      <i class="fab fa-tumblr "></i>
-                    </div>
-                    <div class="details-link"> <a href="#">VIEW DETAILS </a> </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item item-over">
-                <div class="item-bg item-bg-6">
-                  <div class="over-image">
-                    <span>Nimi Sean</span>
-                    <div class="social-icon">
-                      <i class="fab fa-facebook-f "></i>
-                      <i class="fab fa-twitter "></i>
-                      <i class="fab fa-linkedin-in "></i>
-                      <i class="fab fa-tumblr "></i>
-                    </div>
-                    <div class="details-link"> <a href="#">VIEW DETAILS </a> </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!--별점-->
-    <div class="main-container">
-      <div class="inside-container">
-        <div id="result1">
-          <div class="row">
-            <div class="col-12 our-header prom-padd">
-              <h2>별점</h2>
-              <div class="text-center">
-                <hr> <i class="far fa-square rotate-45"></i> <i class="far fa-square rotate-45"></i>
-                <hr>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card" style="width: 450px;">
-          <img src="../static/image/max-image/rating-star.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--신뢰성-->
-    <div class="main-container">
-      <div class="inside-container">
-        <div id="result2">
-          <div class="row">
-            <div class="col-12 our-header prom-padd">
-              <h2>신뢰성</h2>
-              <div class="text-center">
-                <hr> <i class="far fa-square rotate-45"></i> <i class="far fa-square rotate-45"></i>
-                <hr>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!--24시간-->
-    <div class="main-container">
-      <div class="inside-container">
-        <div id="result3">
-          <div class="row">
-            <div class="col-12 our-header prom-padd">
-              <h2>24시간 서비스</h2>
-              <div class="text-center">
-                <hr> <i class="far fa-square rotate-45"></i> <i class="far fa-square rotate-45"></i>
-                <hr>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!--유료 서비스-->
-    <div class="main-container">
-      <div class="inside-container">
-        <div id="result4">
-          <div class="row">
-            <div class="col-12 our-header prom-padd">
-              <h2>유료서비스</h2>
-              <div class="text-center">
-                <hr> <i class="far fa-square rotate-45"></i> <i class="far fa-square rotate-45"></i>
-                <hr>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <!--footer -->
-    <footer class="page-footer footer-bg">
-      <div class="inside-container">
-        <div class="row footer-padd">
-
-          <div class=" col-sm-6 col-lg-3 pop-col">
-            <span></span>
-
-            <div class="row">
-              <div class="col-6 pop-link">
-                <a href="#"></a>
-                <a href="#"></a>
-                <a href="#"></a>
-                <a href="#"></a>
-                <a href="#"></a>
-
-              </div>
-              <div class=" col-6  pop-link">
-                <a href="#"> </a>
-                <a href="#"> </a>
-                <a href="#"></a>
-                <a href="#"> </a>
-              </div>
-            </div>
-          </div>
-          <div class=" col-sm-6 col-lg-3 foot-col-padd">
-            <div class="foot-logo"><img src="../static/image/image/foot-logo.JPG" alt="" class="img-fluid"></div>
-            <div class="dream-text">
-              <p>Got a dream and we just know now we're gonna make our dream come true. No phone no lights no motor car
-                not a single luxury. </p>
-            </div>
-            <div>
-              <i class="fab fa-facebook-f foot-icon "></i>
-              <i class="fab fa-twitter foot-icon "></i>
-              <i class="fab fa-linkedin-in foot-icon "></i>
-              <i class="fab fa-tumblr  foot-icon"></i>
-              <i class="fab fa-vimeo-v  foot-icon"></i>
-              <i class="fab fa-pinterest-p foot-icon "></i>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-3 pop-col ">
-            <span>contact us</span>
+<!--별점-->
+<div class="main-container">
+  <div class="inside-container">
+    <div id="result1">
+      <div class="row">
+        <div class="col-12 our-header prom-padd">
+          <h2>별점</h2>
+          <div class="text-center">
+            <hr> <i class="far fa-square rotate-45"></i> <i class="far fa-square rotate-45"></i>
             <hr>
-            <div class="row contact-row-margin">
-              <i class="fas fa-map-marker-alt contact-icon"></i>
-              <p> Collins Street West,<br> King Street, Melbourne.</p>
-            </div>
-            <div class="row contact-row-margin">
-              <i class="fas fa-phone fa-rotate-90 contact-icon"></i>
-              <p>+(11)123 456 789</p>
-            </div>
-            <div class="row contact-row-margin">
-              <i class="far fa-envelope contact-icon "> </i>
-              <p> info@flamix.com </p>
-            </div>
           </div>
-          <div class="col-sm-6  col-lg-3 pop-col">
-            <span></span>
-
-            <div class="row ltl-blog row-ltl-blog">
-              <div class="col-3"> <img src="" alt="" class="blog-img"></div>
-              <div class="col-9 max-award">
-                <p> </p>
-                <i class="#"></i> <span> </span> <span class="blog-vl"> </span>
-                <i class="#"></i><span> </span>
-              </div>
-            </div>
-
-            <div class="text-center"><a href="#" class="view-blog"></a> </div>
-          </div>
-
-        </div>
-        <div class="row">
-          <div class="col-12 copyright-text">
-            <center>
-              <p> &#169; 2019 <a href="http://digitaconnect.com/">Digital Connect</a>. All Rights Reserved </p>
-          </div>
-          </center>
         </div>
       </div>
-    </footer>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-    <script src="../static/js/script.js">  </script>
-  </body>
+    </div>
+    <div class="card" style="width: 450px;">
+      <img src="../static/image/max-image/rating-star.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--신뢰성-->
+<div class="main-container">
+  <div class="inside-container">
+    <div id="result2">
+      <div class="row">
+        <div class="col-12 our-header prom-padd">
+          <h2>신뢰성</h2>
+          <div class="text-center">
+            <hr> <i class="far fa-square rotate-45"></i> <i class="far fa-square rotate-45"></i>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="width: 450px;">
+      <img src="../static/image/max-image/trust.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--24시간-->
+<div class="main-container">
+  <div class="inside-container">
+    <div id="result3">
+      <div class="row">
+        <div class="col-12 our-header prom-padd">
+          <h2>24시간 서비스</h2>
+          <div class="text-center">
+            <hr> <i class="far fa-square rotate-45"></i> <i class="far fa-square rotate-45"></i>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="width: 450px;">
+      <img src="../static/image/max-image/24h.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--유료 서비스-->
+<div class="main-container">
+  <div class="inside-container">
+    <div id="result4">
+      <div class="row">
+        <div class="col-12 our-header prom-padd">
+          <h2>유료서비스</h2>
+          <div class="text-center">
+            <hr> <i class="far fa-square rotate-45"></i> <i class="far fa-square rotate-45"></i>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="width: 450px;">
+      <img src="../static/image/max-image/money.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--footer -->
+<footer class="page-footer footer-bg">
+  <div class="inside-container">
+    <div class="row footer-padd">
+
+      <div class=" col-sm-6 col-lg-3 pop-col">
+        <span></span>
+
+        <div class="row">
+          <div class="col-6 pop-link">
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+
+          </div>
+          <div class="col-6 pop-link">
+            <a href="#"> </a>
+            <a href="#"> </a>
+            <a href="#"></a>
+            <a href="#"> </a>
+          </div>
+        </div>
+      </div>
+      <div class=" col-sm-6 col-lg-3 foot-col-padd">
+        <div class="foot-logo"><img src="../static/image/image/foot-logo.JPG" alt="" class="img-fluid"></div>
+        <div class="dream-text">
+          <p>Got a dream and we just know now we're gonna make our dream come true. No phone no lights no motor car not
+            a single luxury. </p>
+        </div>
+        <div>
+          <i class="fab fa-facebook-f foot-icon "></i>
+          <i class="fab fa-twitter foot-icon "></i>
+          <i class="fab fa-linkedin-in foot-icon "></i>
+          <i class="fab fa-tumblr  foot-icon"></i>
+          <i class="fab fa-vimeo-v  foot-icon"></i>
+          <i class="fab fa-pinterest-p foot-icon "></i>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3 pop-col ">
+        <span>contact us</span>
+        <hr>
+        <div class="row contact-row-margin">
+          <i class="fas fa-map-marker-alt contact-icon"></i>
+          <p> Collins Street West,<br> King Street, Melbourne.</p>
+        </div>
+        <div class="row contact-row-margin">
+          <i class="fas fa-phone fa-rotate-90 contact-icon"></i>
+          <p>+(11)123 456 789</p>
+        </div>
+        <div class="row contact-row-margin">
+          <i class="far fa-envelope contact-icon "> </i>
+          <p> info@flamix.com </p>
+        </div>
+      </div>
+      <div class="col-sm-6  col-lg-3 pop-col">
+        <span></span>
+
+        <div class="row ltl-blog row-ltl-blog">
+          <div class="col-3"> <img src="" alt="" class="blog-img"></div>
+          <div class="col-9 max-award">
+            <p> </p>
+            <i class="#"></i> <span> </span> <span class="blog-vl"> </span>
+            <i class="#"></i><span> </span>
+          </div>
+        </div>
+
+        <div class="text-center"><a href="#" class="view-blog"></a> </div>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-12 copyright-text">
+        <center>
+          <p> &#169; 2019 <a href="http://digitaconnect.com/">Digital Connect</a>. All Rights Reserved </p>
+      </div>
+      </center>
+    </div>
+  </div>
+</footer>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="../static/js/script.js">  </script>
+</body>
 
 </html>
+{%endblock%}

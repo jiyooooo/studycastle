@@ -22,7 +22,7 @@
 
         <hr>
 
-        <form method="post" action="{% url 'freeboard:board-like' %}">
+        <form method="post" action="{% url 'freeboard:freeboard-like' %}">
             {% csrf_token %}
             <input type="hidden" name="username" value="{{ request.user.username }}">
             <input type="hidden" name="freeboard" value="{{ freeboard.id }}" required>

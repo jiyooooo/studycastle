@@ -1,14 +1,13 @@
 from django.forms import ModelForm
 from django import forms
-from . models import Review
+from . models import Review, ReviewLikePoint
 from django.utils.translation import gettext_lazy as _
 
 
 class ReviewForm(ModelForm):
     class Meta:
         model = Review
-        fields = ['title', 'content', 'username', 'star', 'time']
-
+        fields = ['title', 'content', 'username']
         labels = {
             'title': _('제목'),
             'content': _('내용'),
@@ -25,15 +24,12 @@ class ReviewForm(ModelForm):
                 'max_length': _('내용은 500자 이하로 작성해주세요.')
             },
         }
-
-        
-
         widgets = {
             'username': forms.HiddenInput(),
             'content': forms.Textarea()
-            
         }
 
-
-
-
+class ReviewLikePointForm(ModelForm):
+    class Meta:
+        model = ReviewLikePoint
+        fields = ['like_point']

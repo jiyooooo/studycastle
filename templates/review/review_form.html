@@ -9,8 +9,7 @@
               <div class="card-body" style="background-color: rgba(245, 245, 245, 0);">
                   <form method="post" action="{% url 'review:write' %}">
                       {% csrf_token %}
-                      {{form.as_p}}
-                      <!-- {% for field in form %} 
+                      {% for field in form %} 
                         <div class="form-group">
                             {% if field.html_name != 'username' %}
                             <label for="{{ field.id_for_label }}">{{ field.label }}</label>
@@ -20,6 +19,8 @@
                                       id="{{ field.id_for_label }}"
                                       name="{{ field.html_name }}"
                                       style="background-color: rgba(245, 245, 245, 0);">{{ field.value|default_if_none:'' }}</textarea>
+                            {% elif field.html_name == 'star' or field.html_name == 'time'%}
+                                {{field}}
                             {% else %}
                             <input type="{{ field.field.widget.input_type }}"
                                    class="form-control {% if field.errors|length > 0 %}is-invalid{% endif %}"
@@ -34,7 +35,7 @@
                             
                         </div>
                       {% endfor %}
- -->
+
                       <input class="btn btn-block" style="background-color: rgba(245, 245, 245, 0.3);" type="submit" value="저장">
                   </form>
               </div>

@@ -34,6 +34,9 @@ class ReviewForm(ModelForm):
             
         }
 
-
+    def __init__(self, *args, **kwargs):
+        super(ReviewForm, self).__init__(*args, **kwargs)
+        self.fields['star'].widget.attrs['class'] = 'form-control'
+        self.fields['time'].widget.attrs['class'] = 'form-control'
 
 

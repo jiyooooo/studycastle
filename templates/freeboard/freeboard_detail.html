@@ -1,0 +1,89 @@
+{% extends 'freeboard/freenavbar.html' %}
+{% block content %}
+<div class="container" style="background-color: rgba(245, 245, 245, 0);">
+  <div class="row">
+    <div class="col-sm-12" style="margin-top:100px;">
+      <h3>{{ freeboard.title }}</h3>
+      <p>작성자 {{ freeboard.username }}</p>
+      <pre>{{ freeboard.content }}</pre>
+      <footer class="blockquote-footer"><cite title="Source Title">{{ freeboard.created_at }}</cite></footer>
+      <br>
+
+      {% if freeboard.username == request.user.username %}
+      <div class="btn-group">
+        <a href="{% url 'freeboard:update' pk=freeboard.id %}">
+          <button class="btn" style="background-color: rgba(245, 245, 245, 0);">수정</button>
+        </a>
+        <a href="{% url 'freeboard:delete' pk=freeboard.id %}">
+          <button class="btn" style="background-color: rgba(245, 245, 245, 0);">삭제</button>
+        </a>
+      </div>
+      {% endif %}
+
+      <hr>
+
+      <form method="post" action="{% url 'freeboard:board-like' %}">
+        {% csrf_token %}
+        <input type="hidden" name="username" value="{{ request.user.username }}">
+        <input type="hidden" name="freeboard" value="{{ freeboard.id }}" required>
+        <div class="btn-group">
+          <select class="form-control" name="like_point" style="background-color: rgba(245, 245, 245, 0);" required>
+            <option value="">추천</option>
+            <option value="5" {% if point == 5 %}selected{% endif %}>★★★★★</option>
+            <option value="4" {% if point == 4 %}selected{% endif %}>★★★★☆</option>
+            <option value="3" {% if point == 3 %}selected{% endif %}>★★★☆☆</option>
+            <option value="2" {% if point == 2 %}selected{% endif %}>★★☆☆☆</option>
+            <option value="1" {% if point == 1 %}selected{% endif %}>★☆☆☆☆</option>
+          </select>
+          <button type="submit" class="btn" style="background-color: rgba(245, 245, 245, 0);">점수주기</button>
+        </div>
+      </form>
+
+      <hr>
+
+      <form method="post" action="{% url 'freeboard:comment-write' freeboard_id=freeboard.id %}">
+        <div class="card" style="background-color: rgba(245, 245, 245, 0);">
+          {% csrf_token %}
+          <div class="card-header">
+            <button type="button" class="close" aria-label="Close">
+              <span aria-hidden="true">
+                <input type="submit" class="btn btn-sm" value="댓글 등록">
+              </span>
+            </button>
+          </div>
+          <input type="hidden" name="username" value="{{ request.user.username }}">
+          <input type="hidden" name="freeboard" value="{{ freeboard.id }}">
+          <div class="card-body">
+            <textarea class="form-control" id="content" name="content" rows="2" required></textarea>
+            {% for message in messages %}
+            <p>{{ message.message }}</p>
+            {% endfor %}
+          </div>
+        </div>
+      </form>
+
+      <hr>
+
+      {% for comment in comments %}
+      <div class="card mb-3" style="background-color: rgba(245, 245, 245, 0);">
+        <div class="card-header">
+          <b>{{ comment.username }}</b>
+          {% if comment.username == request.user.username %}
+          <a href="{% url 'freeboard:comment-delete' freeboard_id=freeboard.id comment_id=comment.id %}">
+            <button type="button" class="close" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </a>
+          {% endif %}
+        </div>
+        <div class="card-body">
+          <pre class="card-text">{{ comment.content }}</pre>
+          <footer class="blockquote-footer"><cite title="Source Title">{{ comment.created_at }}</cite></footer>
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</div>
+{% endblock %}

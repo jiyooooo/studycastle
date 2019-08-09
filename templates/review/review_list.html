@@ -1,0 +1,72 @@
+{% extends 'review/reviewnavbar.html' %}
+{% block content %}
+
+<div class="container">
+  {% for review in reviews %}
+  <div class="row" style="margin:20px auto;">
+    <div class="col-sm-12 text-dark">
+      <div class="card border-0" style="background-color: rgba(245, 245, 245, 0.2);">
+        <div class="card-body text-left" style="margin-left: 80px">
+          <h2 class="card-title text-left" style="margin-left: 80px"> {{ review.title }}</a></h2>
+          <h2 class="card-text text-left text-warning" style="margin-left: 80px"> {{ review.total }} </h2>
+          <footer class="blockquote-footer text-left" style="margin-left: 80px"><cite title="Source Title">{{review.username}}</cite></footer>
+          </blockquote>
+          <a href="{% url 'review:detail' review.id %}" class="btn text-dark text-left" style="margin-left: 80px">자세히</a>
+          {% if review.username == request.user.username %}
+
+          <div class="btn-group float-right">
+            <a href="{% url 'review:update' pk=review.id %}">
+              <button class="btn" style="background-color: rgba(245, 245, 245, 0); ">수정</button>
+            </a>
+            <a href="{% url 'review:delete' pk=review.id %}">
+              <button class="btn" style="background-color: rgba(245, 245, 245, 0);">삭제</button>
+            </a>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+  {% endfor %}
+  {% if is_paginated %}
+
+  <div class="row">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        {% if page_obj.has_previous %}
+        <li class="page-item">
+          <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">Previous</span>
+          </a>
+        </li>
+        {% endif %}
+
+        {% for page in page_range %}
+        {% if page == page_obj.number %}
+        <li class="page-item active" style="background-color: rgba(245, 245, 245, 0.4);">
+          <a class="page-link" href="?page={{ page }}">{{ page }}</a>
+        </li>
+        {% else %}
+        <li class="page-item" style="background-color: rgba(245, 245, 245, 0.4);">
+          <a class="page-link" href="?page={{ page }}">{{ page }}</a>
+        </li>
+        {% endif %}
+        {% endfor %}
+
+        {% if page_obj.has_next %}
+        <li class="page-item">
+          <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Next</span>
+          </a>
+        </li>
+        {% endif %}
+      </ul>
+    </nav>
+  </div>
+
+  {% endif %}
+</div>
+{% endblock %}

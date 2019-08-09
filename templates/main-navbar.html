@@ -1,0 +1,74 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<body>
+    <nav class="navbar fixed-top navbar-light" style="background-color: #ffffff;">
+        <div class="main-container nav-bg-color">
+            <div class="inside-container nav-contain">
+                <nav class="navbar navbar-expand-lg navbar-light col-md-12 col-lg-12 col-sm-12">
+                    <a href="{% url 'home' %}"><img src="../../static/image/logos/Logo 4.png" class="img-fluid"
+                            alt=""></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav nav-list ml-auto">
+                            <a class="menu" href="{% url 'home' %}">HOME</a>
+                            <a class="menu" href="{% url 'services' %}">소개</a>
+                            <li class="nav-item dropdown text-dark">
+                                <a class="nav-link dropdown-toggle menu text-dark" href="{% url 'board:index' %}" id="navbardrop"
+                                    style="font-size: 17px;" data-toggle="dropdown">커뮤니티</a>
+                                <div class="dropdown-menu text-dark">
+                                    <a class="dropdown-item text-dark" href="{% url 'board:index' %}">정보게시판</a>
+                                    <a class="dropdown-item text-dark" href="{% url 'freeboard:index' %}">자유게시판</a>
+
+                                </div>
+                            </li>
+
+                            <a class="menu" href="{% url 'blog' %}">추천</a>
+                            <a class="menu" href="{% url 'review:index' %}">리뷰</a>
+                            
+                            <span class="menu last-spc color-line"> | </span>
+                            <div id="d-day" class="d-day"></div>
+                            {% if request.user.is_authenticated %} 
+                            <a class="menu">{{ request.user.username }} 님 접속 중</a>
+                            <a class="menu icon-color  last-spc" href="{% url 'user:logout' %}"><i
+                                class="fas fa-user-alt-slash"></i></a>
+                            {% else %}
+                            <a class="menu icon-color last-spc" href="{% url 'user:login' %}"><i
+                                    class="fas fa-user-plus"></i></a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </nav>
+    </nav>
+    </div>
+    </div>
+    </div>
+
+    {% block content %}
+    {% endblock %}
+</body>
+<script>
+    //디데이 종료 일자 설정
+const countDownDate = new Date("november 15, 2019").getTime();
+
+//1초마다 갱신되도록 함수 생성,실행
+const x = setInterval(function() {
+    // 오늘 날짜 등록
+    const now = new Date().getTime();
+
+    // 종료일자에서 현재일자를 뺀 시간
+    const distance = countDownDate - now;
+
+    // 각 변수에 일, 시, 분, 초를 등록
+    const d = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+    //id가 d-day인 HTML코드에 내용 삽입
+    document.getElementById("d-day").innerHTML = "수능일까지 " + d +"일 남음";
+});
+</script>
+</html>

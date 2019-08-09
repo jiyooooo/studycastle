@@ -1,0 +1,28 @@
+{% extends 'board/navbar.html' %}
+{% block title %}MY PAGE{% endblock %}
+
+    {% block content %}
+    {% if user.is_authenticated %}
+    <div class="row" style="margin:100px auto;">
+        <div class="col-sm-12">
+            <div class="card"  style="background-color: rgba(245, 245, 245, 0);">
+               
+                <div class="card-body text-dark">
+                   <h5>MY PAGE</h5>
+                    <p class="card-text" style="margin-bottom: 0;">      
+                        <p>{{  user.username  }} 님이 접속중입니다.</p>
+                        <p><a href="{% url 'password_change' %}" class="text-dark">비밀번호 변경</a></p>
+                        <p><a href="{% url 'home' %}" class="text-dark">메인페이지로 돌아갈래요!</a></p>
+                        <p><a href="{% url 'user:logout' %}" class="text-dark">logout</a></p>
+                        {% else %}
+                        <a href="{% url 'user:login' %}" class="text-dark">login</a>
+                        <a href="{% url 'user:join' %}" class="text-dark">signup</a>
+                    </p>
+        
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endif %}
+{% endblock %}

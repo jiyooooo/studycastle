@@ -1,0 +1,72 @@
+﻿{% load static %}
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>REVIEW</title>
+  <link rel="stylesheet" href="../../static/css/board.css" type="text/css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet">
+</head>
+<style>
+    .page-link {
+      position: relative;
+      display: block;
+      padding: 0.5rem 0.75rem;
+      margin-left: -1px;
+      line-height: 1.25;
+      color: #ffffff;
+      background-color:rgba(245, 245, 245, 0.2);
+      border: none;
+    }
+    .page-item.disabled .page-link {
+      color: #ffffff;
+      pointer-events: none;
+      cursor: auto;
+      background-color: #CEFFCE;
+      border:none;
+    }
+    .page-item.active .page-link {
+      z-index: 1;
+      color: #fff;
+      background-color: #aaaaaa;
+      border-color: none;
+    }
+    .page-link:focus, .page-link:hover {
+      color: #fff;
+      text-decoration: none;
+      background-color:rgba(245, 245, 245, 0.2);
+      border-color: none;
+    }
+    
+    </style>
+<body>
+    <div class="back"></div>
+  <nav> <div class="col-md-12 col-lg-12" style="margin:100px auto;">
+  <a href="{% url 'home' %}" class="text-dark">HOME</a>
+  <a href="{% url 'freeboard:index' %}" class="text-dark">FREEBOARD</a>
+  <a href="{% url 'board:write' %}" class="text-dark">WRITE</a>
+  
+    {% if request.user.is_authenticated %}
+    <a>{{ request.user.username }}접속 중</a>
+    <a href="{% url 'user:logout' %}" class="text-dark">LOGOUT</a>
+
+    {% else %}
+  <a href="{% url 'user:login' %}" class="text-dark">LOGIN</a>
+  <a href="{% url 'user:join' %}" class="text-dark">SIGNUP</a>
+  {% endif %}
+</div></nav>
+  {% block content %}
+  {% endblock %}
+</body>
+</html>

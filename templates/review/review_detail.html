@@ -1,0 +1,28 @@
+{% extends 'review/reviewnavbar.html' %}
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12" style="margin-top:100px; ">
+      <h3>{{ review.title }}</h3>
+      <h7>작성자: {{ review.username }}</h7>
+      <br>
+      <h7><br>전체 강의 수:<h7 class="text-warning">{{ review.volume }}</h7>
+        <br>한 강의당 러닝타임:<h7 class="text-warning">{{ review.runningtime }}</h7>
+        <br>재미:<h7 class="text-warning">{{ review.fun }}</h7>
+      </h7>
+      <br>
+      <br>
+      <h4>
+        <pre>{{ review.content }}</pre>
+
+      </h4>
+      <a href="{% url 'review:index' %}">
+        <button class="btn" style="background-color: rgba(245, 245, 245, 0); ">목록</button>
+      </a>
+
+
+    </div>
+  </div>
+</div>
+{% endblock %}

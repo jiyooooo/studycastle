@@ -1,0 +1,47 @@
+{% extends 'review/reviewnavbar.html' %}
+{% block content %}
+
+<div class="container">
+    <div class="row" style="margin-top:100px;">
+        <div class="col-sm-12">
+            <div class="card border-0" style="background-color: rgba(245, 245, 245, 0);">
+              <div class="card-header">리뷰 작성</div>
+              <div class="card-body" style="background-color: rgba(245, 245, 245, 0);">
+                  <form method="post" action="{% url 'review:write' %}">
+                      {% csrf_token %}
+                      {% for field in form %} 
+                        <div class="form-group">
+                            {% if field.html_name != 'username' %}
+                            <label for="{{ field.id_for_label }} " >{{ field.label }}</label>
+                            {% endif %}
+                            {% if field.html_name == 'content' %}
+                            <textarea class="form-control {% if field.errors|length > 0 %}is-invalid{% endif %}"
+                                      id="{{ field.id_for_label }}"
+                                      name="{{ field.html_name }}"
+                                      style="background-color: rgba(245, 245, 245, 0);">{{ field.value|default_if_none:'' }}</textarea>
+                            {% elif field.html_name == 'volume' or field.html_name == 'runningtime' or field.html_name == 'fun'  or field.html_name == 'total' %}
+                                {{field}}
+                            {% else %}
+                            <input type="{{ field.field.widget.input_type }}"
+                                   class="form-control {% if field.errors|length > 0 %}is-invalid{% endif %}"
+                                   id="{{ field.id_for_label }}"
+                                   name="{{ field.html_name }}"
+                                   style="background-color: rgba(245, 245, 245, 0);"
+                                   value="{% if field.html_name == 'username' %}{{ request.user.username }}{% else %}{{ field.value|default_if_none:'' }}{% endif %}">
+                            {% endif %}
+                            {% for error in field.errors %}
+                                <div class="invalid-feedback">{{ error }}</div>
+                            {% endfor %}
+                            
+                        </div>
+                      {% endfor %}
+
+                      <input class="btn btn-block" style="background-color: rgba(245, 245, 245, 0.3);" type="submit" value="저장">
+                     
+                  </form>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
